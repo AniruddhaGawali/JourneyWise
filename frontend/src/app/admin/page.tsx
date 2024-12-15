@@ -200,7 +200,7 @@ function AdminPage({}: Props) {
               open={modelOpen}
             >
               <DialogTrigger asChild>
-                <Button className="fixed bottom-10 right-10 transform py-12 text-8xl text-white shadow-lg transition-transform hover:scale-110">
+                <Button className="fixed bottom-10 right-10 z-40 transform py-12 text-8xl text-white shadow-lg transition-transform hover:scale-110">
                   +
                 </Button>
               </DialogTrigger>

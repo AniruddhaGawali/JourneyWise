@@ -39,7 +39,9 @@ export default function Home() {
             top10Destinations={destination.slice(0, 5)}
           />
         </div>
-        <AllDestination isLoading={isLoading} allDestination={destination} />
+        <div className="relative z-20 h-full w-full">
+          <AllDestination isLoading={isLoading} allDestination={destination} />
+        </div>
       </div>
     </>
   );
