@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "title": "Paris Getaway",
+    "description": "Explore the romantic city of Paris with visits to the Eiffel Tower, Louvre Museum, and charming cafes.",
+    "price": 1200,
+    "availableDates": ["2024-12-20", "2025-01-05", "2025-02-14"],
+    "imageUrl": "https://images.pexels.com/photos/1308940/pexels-photo-1308940.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "destination": "Paris",
+    "createdAt": "2024-12-01",
+    "updatedAt": "2024-12-10"
+  },
+  {
+    "id": 2,
+    "title": "Tropical Maldives",
+    "description": "Relax in the serene beaches of Maldives with luxury stays and water sports.",
+    "price": 1500,
+    "availableDates": ["2024-12-25", "2025-01-10", "2025-03-15"],
+    "imageUrl": "https://images.pexels.com/photos/3601425/pexels-photo-3601425.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "destination": "Maldives",
+    "createdAt": "2024-12-05",
+    "updatedAt": "2024-12-10"
+  },
+  {
+    "id": 3,
+    "title": "Tokyo Adventure",
+    "description": "Discover the vibrant culture of Tokyo with tours to Mt. Fuji, Shibuya Crossing, and Akihabara.",
+    "price": 1800,
+    "availableDates": ["2024-12-30", "2025-02-01", "2025-04-10"],
+    "imageUrl": "https://images.pexels.com/photos/248195/pexels-photo-248195.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "destination": "Tokyo",
+    "createdAt": "2024-12-02",
+    "updatedAt": "2024-12-10"
+  },
+  {
+    "id": 4,
+    "title": "Grand Canyon Escape",
+    "description": "Experience the majestic Grand Canyon with guided hikes, rafting, and breathtaking views.",
+    "price": 900,
+    "availableDates": ["2024-12-15", "2025-01-20", "2025-03-05"],
+    "imageUrl": "https://images.pexels.com/photos/3219409/pexels-photo-3219409.jpeg?auto=compress&cs=tinysrgb&w=800",
+    "destination": "Grand Canyon, USA",
+    "createdAt": "2024-12-03",
+    "updatedAt": "2024-12-10"
+  },
+  {
+    "id": 5,
+    "title": "South African Safari",
+    "description": "Embark on a thrilling safari adventure to see lions, elephants, and more in their natural habitat.",
+    "price": 2500,
+    "availableDates": ["2025-01-10", "2025-03-01", "2025-04-20"],
+    "imageUrl": "https://images.pexels.com/photos/26492546/pexels-photo-26492546/free-photo-of-quiver-trees-at-desert.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2g",
+    "destination": "South Africa",
+    "createdAt": "2024-12-04",
+    "updatedAt": "2024-12-10"
+  },
+  {
+    "id": 6,
+    "title": "Swiss Alps Skiing",
+    "description": "Enjoy an unforgettable skiing experience in the stunning Swiss Alps with cozy mountain lodges.",
+    "price": 2000,
+    "availableDates": ["2024-12-25", "2025-01-15", "2025-02-20"],
+    "imageUrl": "https://images.pexels.com/photos/29480067/pexels-photo-29480067/free-photo-of-stunning-winter-view-of-zermatt-and-matterhorn.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "destination": "Switzerland",
+    "createdAt": "2024-12-06",
+    "updatedAt": "2024-12-10"
+  },
+  {
+    "id": 7,
+    "title": "Icelandic Aurora Adventure",
+    "description": "Witness the mesmerizing Northern Lights dance across the night sky in Iceland.",
+    "price": 1400,
+    "availableDates": ["2025-01-25", "2025-02-10", "2025-03-20"],
+    "imageUrl": "https://images.pexels.com/photos/5398480/pexels-photo-5398480.jpeg?auto=compress&cs=tinysrgb&w=800",
+    "destination": "Iceland",
+    "createdAt": "2024-12-11",
+    "updatedAt": "2024-12-14"
+  },
+  {
+    "id": 8,
+    "title": "Amazon Rainforest Discovery",
+    "description": "Explore the diverse ecosystems of the Amazon with guided jungle treks and wildlife encounters.",
+    "price": 2200,
+    "availableDates": ["2025-01-15", "2025-04-01", "2025-05-15"],
+    "imageUrl": "https://images.pexels.com/photos/4091042/pexels-photo-4091042.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "destination": "Amazon Rainforest, Brazil",
+    "createdAt": "2024-12-12",
+    "updatedAt": "2024-12-14"
+  },
+  {
+    "id": 9,
+    "title": "Greek Island Hopping",
+    "description": "Sail the Aegean Sea, visiting picturesque Greek islands with ancient ruins and stunning beaches.",
+    "price": 1600,
+    "availableDates": ["2025-03-01", "2025-04-15", "2025-05-25"],
+    "imageUrl": "https://images.pexels.com/photos/1285625/pexels-photo-1285625.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "destination": "Greek Islands",
+    "createdAt": "2024-12-13",
+    "updatedAt": "2024-12-14"
+  },
+  {
+    "id": 10,
+    "title": "New Zealand Hiking Expedition",
+    "description": "Challenge yourself with breathtaking hikes through New Zealand's stunning glaciers, mountains, and national parks.",
+    "price": 1900,
+    "availableDates": ["2025-02-25", "2025-04-10", "2025-05-20"],
+    "imageUrl": "https://images.pexels.com/photos/2405100/pexels-photo-2405100.jpeg?auto=compress&cs=tinysrgb&w=800",
+    "destination": "New Zealand",
+    "createdAt": "2024-12-14",
+    "updatedAt": "2024-12-14"
+  },
+  {
+    "title": "Scottish Highlands Getaway",
+    "description": "Immerse yourself in the rugged beauty of the Scottish Highlands with hikes, castles, and local villages.",
+    "price": 1100,
+    "availableDates": ["2025-02-05", "2025-03-10", "2025-04-25"],
+    "imageUrl": "https://images.pexels.com/photos/4064432/pexels-photo-4064432.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "destination": "Scottish Highlands",
+    "createdAt": "2024-12-14",
+    "updatedAt": "2024-12-14"
+  }
+]

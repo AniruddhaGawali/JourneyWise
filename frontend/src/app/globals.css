@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer base {
+  :root {
+    --background: 18 100% 95%;
+    --foreground: 18 5% 10%;
+    --card: 18 50% 90%;
+    --card-foreground: 18 5% 15%;
+    --popover: 18 100% 95%;
+    --popover-foreground: 18 100% 10%;
+    --primary: 18 51.5% 46.1%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 18 30% 70%;
+    --secondary-foreground: 0 0% 0%;
+    --muted: -20 30% 85%;
+    --muted-foreground: 18 5% 35%;
+    --accent: -20 30% 80%;
+    --accent-foreground: 18 5% 15%;
+    --destructive: 0 100% 30%;
+    --destructive-foreground: 18 5% 90%;
+    --border: 18 30% 50%;
+    --input: 18 30% 26%;
+    --ring: 18 51.5% 46.1%;
+    --radius: 0.5rem;
+  }
+  .dark {
+    --background: 18 50% 10%;
+    --foreground: 18 5% 90%;
+    --card: 18 50% 10%;
+    --card-foreground: 18 5% 90%;
+    --popover: 18 50% 5%;
+    --popover-foreground: 18 5% 90%;
+    --primary: 18 51.5% 46.1%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 18 30% 20%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: -20 30% 25%;
+    --muted-foreground: 18 5% 60%;
+    --accent: -20 30% 25%;
+    --accent-foreground: 18 5% 90%;
+    --destructive: 0 100% 30%;
+    --destructive-foreground: 18 5% 90%;
+    --border: 18 30% 26%;
+    --input: 18 30% 26%;
+    --ring: 18 51.5% 46.1%;
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
