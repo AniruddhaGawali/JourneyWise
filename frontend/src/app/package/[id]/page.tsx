@@ -60,7 +60,7 @@ function Package({}: Props) {
           </h3>
 
           <p className="font-dm-serif-display text-2xl font-normal sm:text-4xl md:text-5xl">
-            ₹<span className="font-dm-serif-display">{destination.price} </span>
+            $<span className="font-dm-serif-display">{destination.price} </span>
             <span className="text-base font-normal sm:text-lg md:text-xl">
               per person
             </span>

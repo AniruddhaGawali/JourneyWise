@@ -43,7 +43,7 @@ function TopDestinations({ top10Destinations, isLoading }: Props) {
                     {destination.destination}
                   </p>
                   <p className="text-2xl font-normal">
-                    ₹
+                    $
                     <span className="font-dm-serif-display">
                       {" "}
                       {destination.price}
