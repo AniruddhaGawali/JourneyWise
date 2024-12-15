@@ -36,7 +36,7 @@ function AllDestination({ allDestination, isLoading }: Props) {
       <h2 className="container mt-8 font-dm-serif-display text-2xl font-bold md:text-4xl">
         All List Destinations
       </h2>
-      <div className="mt-16 grid grid-cols-1 gap-8 rounded-lg sm:grid-cols-2 md:grid-cols-3">
+      <div className="mt-16 grid grid-cols-1 gap-8 rounded-lg sm:grid-cols-2 lg:grid-cols-3">
         {allDestination.map((destination) => {
           return (
             <div className="relative h-[50vh] w-full max-w-lg rounded-lg">

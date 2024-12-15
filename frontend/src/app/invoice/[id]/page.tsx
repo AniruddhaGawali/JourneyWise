@@ -4,14 +4,15 @@ import React, { useEffect, useState } from "react";
 import { getBookingById } from "@/actions/bookingAction";
 import { Invoice } from "@/types";
 import { useParams } from "next/navigation";
-import { jsPDF } from "jspdf";
 import { BackgroundGradient } from "@/components/ui/background-gradient";
 import { Button } from "@/components/ui/button";
+import { usePDF } from "react-to-pdf";
 
 const InvoicePage: React.FC = () => {
   const { id } = useParams() as { id: string };
   const [booking, setBooking] = useState<Invoice | null>(null);
   const [loading, setLoading] = useState(true);
+  const { toPDF, targetRef } = usePDF({ filename: "invoice.pdf" });
 
   useEffect(() => {
     setLoading(true);
@@ -34,44 +35,7 @@ const InvoicePage: React.FC = () => {
 
   const generatePDF = () => {
     if (!booking) return;
-
-    const doc = new jsPDF();
-
-    // Title
-    doc.setFontSize(20);
-    doc.text("Travel Booking Invoice", 20, 20);
-
-    // Customer Details
-    doc.setFontSize(12);
-    doc.text(`Name: ${booking.name}`, 20, 40);
-    doc.text(`Email: ${booking.email}`, 20, 50);
-    doc.text(`Phone: ${booking.phone}`, 20, 60);
-
-    // Package Details
-    doc.text(`Package: ${booking.package.title}`, 20, 80);
-    doc.text(`Destination: ${booking.package.destination}`, 20, 90);
-    doc.text(
-      `Booking Date: ${new Date(booking.bookingDate).toLocaleDateString(
-        "en-US",
-        {
-          weekday: "long",
-          year: "numeric",
-          month: "long",
-          day: "numeric",
-        },
-      )}`,
-      20,
-      100,
-    );
-    doc.text(`Number of Travellers: ${booking.noOfTravellers}`, 20, 110);
-
-    // Cost Breakdown
-    doc.setFontSize(14);
-    doc.text(`Price per Person: ${booking.package.price}`, 20, 130);
-    doc.text(`Total Cost: ${calculateTotalCost()}`, 20, 140);
-
-    // Save PDF
-    doc.save(`invoice_${booking._id}.pdf`);
+    toPDF();
   };
 
   if (loading) {
@@ -91,7 +55,10 @@ const InvoicePage: React.FC = () => {
   }
 
   return (
-    <div className="flex min-h-screen items-center justify-center">
+    <div
+      className="flex min-h-screen items-center justify-center"
+      ref={targetRef}
+    >
       <BackgroundGradient>
         <div className="container mx-auto p-6">
           <div className="mx-auto max-w-2xl rounded-lg bg-white/80 p-6 shadow-md">

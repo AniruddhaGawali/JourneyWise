@@ -7,6 +7,7 @@ import {
   updatePackage,
 } from "@/actions/packagesAction";
 import { getBookings } from "@/actions/bookingAction";
+import { login } from "@/actions/adminAction";
 import { Invoice, Packages } from "@/types";
 import {
   Dialog,
@@ -55,6 +56,10 @@ function AdminPage({}: Props) {
   const [allInvoices, setAllInvoices] = useState<Invoice[]>([]);
   const [modelOpen, setModelOpen] = useState(false);
   const [isEditing, setIsEditing] = useState(-1);
+  const [isLogin, setIsLogin] = useState(false);
+
+  const [email, setEmail] = useState("test@gmail.com");
+  const [password, setPassword] = useState("test123");
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -127,7 +132,46 @@ function AdminPage({}: Props) {
     }
   }, [modelOpen]);
 
-  console.log(allPackages);
+  if (!isLogin) {
+    return (
+      <div className="container relative mx-auto min-h-screen w-full px-4 py-10 sm:px-6 lg:px-8">
+        <h1 className="mb-10 text-center text-4xl font-bold">Admin Panel</h1>
+        <div className="flex flex-col items-center justify-center">
+          <h2 className="mb-6 text-2xl font-semibold">Login</h2>
+          <form
+            className="flex w-full max-w-sm flex-col items-center justify-center"
+            onSubmit={(e) => {
+              e.preventDefault();
+              login(email, password)
+                .then((res) => {
+                  setIsLogin(true);
+                })
+                .catch((err) => {
+                  alert("Invalid email or password");
+                  console.error("Error logging in:", err);
+                });
+            }}
+          >
+            <Input
+              type="email"
+              className="mb-4 p-2"
+              placeholder="Email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+            <Input
+              type="password"
+              className="mb-4 p-2"
+              placeholder="Password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
+            <Button type="submit">Login</Button>
+          </form>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="container relative mx-auto min-h-screen w-full px-4 py-10 sm:px-6 lg:px-8">
@@ -413,7 +457,7 @@ function AdminPage({}: Props) {
                     Destination: {invoice.package.destination}
                   </p>
                   <p className="text-lg font-medium text-accent">
-                    Price: ${invoice.package.price}
+                    Price: ${invoice.package.price * invoice.noOfTravellers}
                   </p>
                 </div>
               </div>
